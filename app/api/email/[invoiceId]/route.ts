@@ -38,7 +38,7 @@ export async function POST(
       template_uuid: "03c0c5ec-3f09-42ab-92c3-9f338f31fe2c",
       template_variables: {
         first_name: invoiceData.clientName,
-        company_info_name: "InvoiceMarshal",
+        company_info_name: "InvoiceNexaWings",
         company_info_address: "Chad street 124",
         company_info_city: "Munich",
         company_info_zip_code: "345345",
