@@ -68,14 +68,14 @@ export async function createInvoice(prevState: any, formData: FormData) {
   });
 
   const sender = {
-    email: "hello@demomailtrap.com",
-    name: "Jan Marshal",
+    email: "hello@nexawings.com",
+    name: "Aditya Kumar",
   };
 
   emailClient.send({
     from: sender,
-    to: [{ email: "jan@alenix.de" }],
-    template_uuid: "3c01e4ee-a9ed-4cb6-bbf7-e57c2ced6c94",
+    to: [{ email: submission.value.clientEmail }],
+    template_uuid: "8ca00416-37bf-4e37-ba50-6ec40b841593",
     template_variables: {
       clientName: submission.value.clientName,
       invoiceNumber: submission.value.invoiceNumber,
@@ -134,14 +134,14 @@ export async function editInvoice(prevState: any, formData: FormData) {
   });
 
   const sender = {
-    email: "hello@demomailtrap.com",
-    name: "Jan Marshal",
+    email: "hello@nexawings.com",
+    name: "Aditya Kumar",
   };
 
   emailClient.send({
     from: sender,
-    to: [{ email: "jan@alenix.de" }],
-    template_uuid: "9d04aa85-6896-48a8-94e9-b54354a48880",
+    to: [{ email: submission.value.clientEmail }],
+    template_uuid: "8ca00416-37bf-4e37-ba50-6ec40b841593",
     template_variables: {
       clientName: submission.value.clientName,
       invoiceNumber: submission.value.invoiceNumber,
@@ -152,10 +152,10 @@ export async function editInvoice(prevState: any, formData: FormData) {
         amount: submission.value.total,
         currency: submission.value.currency as any,
       }),
-      invoiceLink:
-        process.env.NODE_ENV !== "production"
-          ? `http://localhost:3000/api/invoice/${data.id}`
-          : `https://invoice-marshal.vercel.app/api/invoice/${data.id}`,
+      invoiceLink: `http://localhost:3000/api/invoice/${data.id}`
+        // process.env.NODE_ENV !== "production"
+        //   ? `http://localhost:3000/api/invoice/${data.id}`
+        //   : `https://invoice-marshal.vercel.app/api/invoice/${data.id}`,
     },
   });
 

@@ -51,7 +51,12 @@ export default async function DashboardLayout({
           <div className="flex flex-col max-h-screen h-full gap-2">
             <div className="h-14 flex items-center border-b px-4 lg:h-[60px] lg:px-6">
               <Link href="/" className="flex items-center gap-2">
-                <Image src={Logo} alt="Logo" className="size-7" />
+              <Image
+    src="/NEXAWINGSelement.png"
+    alt="Nexawings Element"
+    width={50} // Replace with the actual width
+    height={50} // Replace with the actual height
+  />
                 <p className="text-2xl font-bold">
                   Invoice<span className="text-blue-600"></span>
                 </p>
