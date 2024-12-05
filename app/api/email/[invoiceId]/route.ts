@@ -29,7 +29,7 @@ export async function POST(
 
     const sender = {
       email: "hello@demomailtrap.com",
-      name: "Jan Marshal",
+      name: "Aditya Kumar",
     };
 
     emailClient.send({
@@ -39,10 +39,10 @@ export async function POST(
       template_variables: {
         first_name: invoiceData.clientName,
         company_info_name: "InvoiceNexaWings",
-        company_info_address: "Chad street 124",
-        company_info_city: "Munich",
-        company_info_zip_code: "345345",
-        company_info_country: "Germany",
+        company_info_address: "Godrej Genesis",
+        company_info_city: "Kolkata",
+        company_info_zip_code: "700091",
+        company_info_country: "West Bengal",
       },
     });
 
